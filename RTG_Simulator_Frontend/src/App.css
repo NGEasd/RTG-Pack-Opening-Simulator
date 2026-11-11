@@ -1,0 +1,1360 @@
+/* Általános stílusok */
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  padding-top: 60px;
+}
+
+
+/* Navigációs sáv */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: #487086;
+  color: white;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 0.3rem 2rem;
+  box-sizing: border-box;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-brand img {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s;
+  padding:0.3rem;
+}
+
+.nav-element img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 0.3rem;
+}
+
+.nav-element:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.nav-menu-title {
+  font-size: 0.9rem;
+}
+
+
+/* Kezdőlap */
+.home-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.welcome-section,
+.user-menu-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.welcome-section h1 {
+  font-size: 1.8rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.user-balance-section {
+  flex: 1 1 100%;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.user-balance-section h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a237e;
+}
+
+.user-balance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  background-color: #1a237e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.coin-image {
+  width: 20px;
+  height: 20px;
+}
+
+.balance-value {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.user-menu-section h2 {
+  font-size: 1.5rem;
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.user-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link-button {
+  background-color: #4dd0e1;
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.link-button:hover {
+  background-color: #26c6da;
+}
+
+.left-side {
+  flex: 1.2;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-side h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.login-poster {
+  border: solid #1e1e1e 0.1rem;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.login-poster:hover {
+  border: solid #ff0000 0.15rem;
+  border-radius: 10px;
+  transform: scale(1.03);
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.info-card {
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.info-card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #1e1e2f;
+}
+
+.info-card-description {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* Discovery page */
+
+.card-discovery-page {
+  position: relative;
+  max-width: none;
+  margin: 0 auto;
+  padding-left: calc(25px + 250px + 30px);
+  padding-right: 10px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.filter-sidebar {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 120px;
+  left: 25px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.filter-sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.filter-group input[type="number"],
+.filter-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 3.5rem;
+  width: 900px;
+  min-width: 550px;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+}
+
+.cardcontainer-element {
+  border-radius: 5px;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  max-width: 270px;
+  background-color: transparent;
+}
+
+.cardcontainer-element.gold {
+  background-image: linear-gradient(45deg, #302a08, #DAA520, #B8860B);
+}
+
+.cardcontainer-element.silver {
+  background-image: linear-gradient(45deg, #09393f, #a0a0a0, #bebcb4);
+}
+
+.cardcontainer-element.bronze {
+  background-image: linear-gradient(45deg, #613b12, #8f5828, #653002);
+}
+
+.cardcontainer-element.base {
+  background-image: linear-gradient(45deg, #ffffff, #eaeaea, #ffffff);
+}
+
+.cardcontainer-element:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+.card-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-section.rarity {
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardcontainer-element .rarity-image {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 2px;
+}
+
+.cardcontainer-element .rarity-text {
+  font-size: 0.8em;
+  color: #777;
+  text-align: center;
+}
+
+.card-section.center {
+  flex-grow: 2;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.player-name {
+  color: rgb(233, 245, 255);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.player-position {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  color: #555;
+}
+
+.cardcontainer-element .card-section.overall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.player-overall {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Média lekérdezések a reszponzivitáshoz */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+/* Detailed card page*/
+
+.detailed-card-informations {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.detailed-card-statistics {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-details-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.detailed-card-statistics .rarity-image {
+  width: 50px;
+  height: 50px;
+}
+
+.detailed-card-statistics .rarity-text {
+    font-size: 1em;
+    color: #555;
+}
+
+.detailed-card-statistics .player-name {
+    font-size: 1.8rem;
+    color: #1a237e;
+    margin-bottom: 0.3rem;
+}
+
+.detailed-card-statistics .player-position {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.detailed-card-statistics .player-overall {
+    font-size: 1.4em;
+    width: 50px;
+    height: 50px;
+    background-color: #26c6da;
+    color: white;
+    border: 2px solid #1a237e;
+}
+
+.detailed-card-statistics .stat-item{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detailed-card-statistics .stat-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  width: 180px;
+  text-align: right;
+}
+
+.progress-bar-container {
+  flex: 1;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 15px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  transition: width 2.5s ease-in-out;
+}
+
+.card-details-pricetag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+}
+
+.price-image {
+  width: 30px;
+  height: 30px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.price-text {
+  color: #28a745;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .detailed-card-informations {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detailed-card-item {
+    flex: none;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 2rem;
+  }
+
+  .detailed-card-statistics {
+    width: 100%;
+  }
+
+  .card-details-header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .detailed-card-statistics .rarity-image {
+      margin-bottom: 10px;
+  }
+
+  .detailed-card-statistics .stat-item p {
+      width: auto;
+      text-align: left;
+  }
+}
+
+/* Autentikációs konténer (Regisztráció/Login) */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.auth-nav {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-nav button {
+  padding: 12px 25px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  outline: none;
+}
+
+.auth-nav button.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.auth-nav button:hover:not(.active) {
+  background-color: #e2e6ea;
+}
+
+.auth-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-form h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.auth-form label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: calc(100% - 24px);
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:active {
+  background-color: #004085;
+}
+
+.message-box {
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.message-box.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message-box.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Reszponzivitás autentikációs konténerhez */
+@media (max-width: 600px) {
+  .auth-form {
+    margin: 0 15px;
+    padding: 20px;
+  }
+  .auth-nav button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Csomagok oldala */
+.pack-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.opening-image {
+  width: 400px;
+  height: 400px;
+}
+
+.pack-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.opened-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pack-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: calc(33.333% - 1.333rem);
+  min-width: 200px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pack-element:hover {
+  background-color: #e6f7ff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pack-element img[alt="pack-image"] {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.pack-element h3 {
+  font-size: 1.5rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.pack-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.pack-price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 1rem;
+}
+
+.pack-price-container img {
+  width: 20px;
+  height: 20px;
+}
+
+.pack-price {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.opened-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.game-button {
+  background-color: #26c6da;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+.game-button:hover {
+  background-color: #00bcd4;
+}
+
+.game-button:active {
+  background-color: #0097a7;
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 992px) {
+  .pack-element {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .pack-element {
+    width: 90%;
+    max-width: 300px;
+  }
+  .pack-container {
+      gap: 1.5rem;
+  }
+}
+
+
+/* Kártya az inventoryban */
+.inventory-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  justify-content: center;
+}
+
+.inventory-container h3 {
+  color: #a0a0a0;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* Kártya az inventoryban */
+.inventory-element {
+  background-color: #2a2f3a;
+  border: 1px solid #444b58;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 280px;
+  overflow: hidden;
+  color: #e0e0e0;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inventory-element:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.inventory-card {
+  width: 100%;
+  height: 120px;
+  background-color: #3b404d;
+  border: 1px solid #555d6e;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* PlayerCard méretének felülírása az inventory-n belül */
+.inventory-card .player-card {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  box-shadow: none;
+  border: none;
+  border-radius: 4px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inventory-card .player-card .card-rarity-image {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.3rem;
+}
+
+.inventory-card .player-card .player-name {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.inventory-card .player-card .ovr {
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.inventory-card .player-card .position {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.inventory-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.inventory-cardname p {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 5px 0 10px 0;
+  color: #f0f0f0;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.price img {
+  width: 20px;
+  height: 20px;
+}
+
+.price p {
+  font-size: 1em;
+  color: #ffc107;
+  margin: 0;
+}
+
+.inventory-card-nav {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.inventory-card-nav button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+  flex-grow: 1;
+  min-width: 45%;
+}
+
+.inventory-card-nav button:hover {
+  background-color: #45a049;
+}
+
+.inventory-card-nav a button {
+  background-color: #007bff;
+}
+
+.inventory-card-nav a button:hover {
+  background-color: #0056b3;
+}
+
+.inventory-card-nav a {
+  text-decoration: none;
+  display: flex;
+  flex-grow: 1;
+  min-width: 45%;
+}
+
+/* DEFAULT BUTTON */
+.def-button {
+  background-color: #487086;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.def-button:hover {
+  background-color: #3e6074;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.def-button:active {
+  background-color: #335060;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Player card element */
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem 1rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.player-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-rarity-image {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+}
+
+.card-rarity-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.player-name {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #1a237e;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+
+.ovr {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0c281e;
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.position {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.rarity-base {
+  background-color: #bfbfbf;
+  border-color: #cbcbcb;
+}
+
+.rarity-bronze {
+  border-color: #a66a29;
+}
+
+.rarity-silver {
+  background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+  border-color: #b0b0b0;
+}
+
+.rarity-gold {
+  background: linear-gradient(145deg, #ffd700, #daa520);
+  border-color: #cc9900;
+}
+
+/* Add card form */
+.add-card-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 3.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  max-width: 750px;
+  margin: 2rem auto;
+  width: 500px;
+}
+
+.add-card-form-container h3 {
+  color: #444;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.add-player-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 95%;
+}
+
+form .add-player-form label {
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+form .add-player-form input[type="text"],
+form .add-player-form input[type="number"],
+form .add-player-form select {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form .add-player-form input[type="text"]:focus,
+form .add-player-form input[type="number"]:focus,
+form .add-player-form select:focus {
+  outline: none;
+  border-color: #66b3ff;
+  box-shadow: 0 0 0 3px rgba(102, 179, 255, 0.3);
+}
+
+form .add-player-form select option {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.stats-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem; 
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stats-group p {
+  grid-column: 1 / -1; /* Teljes szélességű oszlop */
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.stat-item-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.stat-item-form label {
+  text-align: center;
+  width: 100%;
+}
+
+.stat-item-form input[type="number"] {
+    max-width: 60px; /* Még rövidebb input mezők a statoknak */
+    text-align: center;
+}
+
+form .add-player-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-top: 1.5rem;
+  align-self: center;
+  width: auto;
+  min-width: 150px;
+}
+
+form .add-player-form button[type="submit"]:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form .add-player-form button[type="submit"]:active {
+  background-color: #1e7e34;
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .add-card-form-container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+  .stats-group {
+    grid-template-columns: repeat(2, 1fr); /* 2 oszlop mobil nézetben */
+  }
+  @media (max-width: 480px) {
+    .stats-group {
+      grid-template-columns: 1fr; /* Egy oszlop nagyon kicsi képernyőkön */
+    }
+  }
+}
+
+/* Update POP-UP window */
+/* Háttér overlay */
+.popup-window-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding-top: 60px;
+}
+
+/* Tartalomdoboz */
+.popup-content {
+  background-color: #fff;
+  padding: 1.7rem;
+  border-radius: 1rem;
+  width: 340px;
+  max-width: 76.5vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Bezáró gomb */
+.popup-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-close:hover {
+  background-color: #dc143c;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Űrlap */
+.card-update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* Inputok és selectek */
+.card-update-form input,
+.card-update-form select {
+  padding: 0.425rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+}
+
+/* Submit gomb */
+.update-send {
+  padding: 0.6375rem;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.update-send:hover {
+  background-color: #0056b3;
+}
